@@ -29,6 +29,7 @@ export class AppComponent implements OnInit{
   currentCheckOutVal!:string;
   welcomeMessageEN!:Observable<string>;
   welcomeMessageFR!:Observable<string>;
+  times!:Observable<string>;
 
     ngOnInit(){
       this.roomsearch= new FormGroup({
@@ -41,6 +42,8 @@ export class AppComponent implements OnInit{
       this.welcomeMessageEN = this.httpClient.get(this.baseURL + "/welcomeEN", {responseType: "text"}) as Observable<string>;
 
       this.welcomeMessageFR = this.httpClient.get(this.baseURL + "/welcomeFR", {responseType: "text"}) as Observable<string>;
+
+      this.times = this.httpClient.get(this.baseURL + "/times", {responseType: "text"}) as Observable<string>;
 
     const roomsearchValueChanges$ = this.roomsearch.valueChanges;
 

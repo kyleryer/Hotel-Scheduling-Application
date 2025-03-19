@@ -1,6 +1,4 @@
-
-
-<header id="intro" style="display: block;">
+<header id="intro" style="display: block;" xmlns="http://www.w3.org/1999/html">
   <article class="fullheight" style="height: 568px;">
     <div class="hgroup">
       <h1>Landon Hotel</h1>
@@ -16,7 +14,7 @@
       <div class="navbar">
         <div class="brand"><a href="/#welcome">Landon <span>Hotel</span></a></div>
         <div>
-          <h2>{{ welcomeMessageEN | async}}</h2>
+          <h2>{{ welcomeMessageEN | async }}</h2>
           <h2>{{ welcomeMessageFR | async }}</h2>
         </div>
       </div><!-- navbar -->
@@ -27,6 +25,10 @@
   <div class="scene" id="welcome">
     <article class="content">
 
+      <div>
+        <h2>Join us for an online live presentation held at the London Hotel on Mar 18, 2025 at:</h2>
+        <h2>{{ times | async }}</h2><br/>
+      </div>
 
 
       <div class="row">
